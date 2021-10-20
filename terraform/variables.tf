@@ -1,3 +1,4 @@
+
 variable "log_analytics_workspace_name" {
   description = "Specifies the name of the log analytics workspace"
   default     = "BaboAksWorkspace"
@@ -238,13 +239,13 @@ variable "default_node_pool_max_count" {
 variable "default_node_pool_min_count" {
   description = "(Required) The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count."
   type          = number
-  default       = 3
+  default       = 2
 }
 
 variable "default_node_pool_node_count" {
   description = "(Optional) The initial number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be a value in the range min_count - max_count."
   type          = number
-  default       = 3
+  default       = 2
 }
 
 variable "additional_node_pool_subnet_name" {
@@ -346,13 +347,13 @@ variable "additional_node_pool_max_count" {
 variable "additional_node_pool_min_count" {
   description = "(Required) The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count."
   type          = number
-  default       = 3
+  default       = 0
 }
 
 variable "additional_node_pool_node_count" {
   description = "(Optional) The initial number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be a value in the range min_count - max_count."
   type          = number
-  default       = 3
+  default       = 0
 }
 
 variable "domain_name_label" {
