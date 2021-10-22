@@ -239,13 +239,13 @@ variable "default_node_pool_max_count" {
 variable "default_node_pool_min_count" {
   description = "(Required) The minimum number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be less than or equal to max_count."
   type          = number
-  default       = 2
+  default       = 1
 }
 
 variable "default_node_pool_node_count" {
   description = "(Optional) The initial number of nodes which should exist within this Node Pool. Valid values are between 0 and 1000 and must be a value in the range min_count - max_count."
   type          = number
-  default       = 2
+  default       = 1
 }
 
 variable "additional_node_pool_subnet_name" {
@@ -405,7 +405,7 @@ variable "vm_size" {
 
 variable "vm_os_disk_storage_account_type" {
   description = "Specifies the storage account type of the os disk of the jumpbox virtual machine"
-  default     = "Premium_LRS"
+  default     = "Standard_LRS"
   type        = string
 
   validation {
